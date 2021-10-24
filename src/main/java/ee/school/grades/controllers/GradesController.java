@@ -1,4 +1,4 @@
-package ee.school.grades.controller;
+package ee.school.grades.controllers;
 
 import ee.school.grades.dto.Grade;
 import ee.school.grades.dto.Student;
@@ -6,9 +6,7 @@ import ee.school.grades.services.GradesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class GradesController {
