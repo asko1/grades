@@ -45,7 +45,13 @@ public class GradesService {
         Student student1 = new Student(id, "S. Tudent");
         Grade grade1 = new Grade(1, "CS", 1, 4);
 
-        student1.setName(newStudent.getName());
+        if (newStudent.getName() != null) {
+            student1.setName(newStudent.getName());
+        }
+
+        if (newStudent.getGrades() != null) {
+            student1.setGrades(newStudent.getGrades());
+        }
 
         grades.add(grade1);
         student1.setGrades(grades);
@@ -56,7 +62,17 @@ public class GradesService {
         Student student1 = new Student(1, "S. Tudent");
         Grade grade1 = new Grade(id, "CS", 1, 4);
 
-        grade1.setSubject(newGrade.getSubject());
+        if (newGrade.getSubject() != null) {
+            grade1.setSubject(newGrade.getSubject());
+        }
+
+        if (newGrade.getGrade() != 0) {
+            grade1.setGrade(newGrade.getGrade());
+        }
+
+        if (newGrade.getStudent() != null) {
+            grade1.setStudent(newGrade.getStudent());
+        }
 
         grade1.setStudent(student1);
         return grade1;
